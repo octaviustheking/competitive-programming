@@ -7,10 +7,10 @@ for i in range(int(input())):
     final_string = ""
     new_list = working
 
-    if not (all(x % 2 == 0 for x in working) or all(x % 2 == 1 for x in working)): new_list = sorted(working)
+    if len({x & 1 for x in working}) == 2: new_list = sorted(working)
 
-    for x in new_list:
-        final_string += (" " + str(x))
+    # rmb this cuz it makes it faster
+    final_string = " ".join(map(str, new_list))
 
     lo_nums.append(final_string.strip())
 
