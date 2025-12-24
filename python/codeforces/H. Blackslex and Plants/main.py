@@ -1,4 +1,4 @@
-# NOOOO i solved this fucking last second and i couldn't turn it in on time >:()
+# timed out, might try this in java.
 
 times = int(input())
 for i in range(times):
