@@ -1,4 +1,3 @@
-package h_blackslex_and_plants;
 import java.util.*;
 
 public class Main {
@@ -6,10 +5,20 @@ public class Main {
         Scanner input = new Scanner(System.in);
         int times = input.nextInt();
         for (int i = 0; i < times; i++) {
-            int plants = input.nextInt();
+            int[] plants = new int[input.nextInt()];
             int water_ops = input.nextInt();
-            System.out.println(plants);
-            System.out.println(water_ops);
+            for (int j = 0; j < water_ops; j++) {
+                int l = input.nextInt();
+                int r = input.nextInt();
+                for (int k = l; k <= r; k++) {
+                    int func_number = k - l + 1;
+                    plants[k - 1] += (func_number & -func_number) * func_number;
+                }
+            }
+            for (int num : plants) {
+                System.out.print(num + " ");
+            }
+            System.out.print("\n");
         }
     }
 }
