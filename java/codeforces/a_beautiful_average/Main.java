@@ -1,4 +1,4 @@
-//package a_beautiful_average;
+package a_beautiful_average;
 import java.util.*;
 
 public class Main {
