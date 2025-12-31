@@ -5,7 +5,7 @@ for i in range(times):
     strings = input().split()
     final_string = ""
     for string in strings:
-        if string < final_string:
+        if (string + final_string) < (final_string + string):
             final_string = string + final_string
         else:
             final_string = final_string + string
