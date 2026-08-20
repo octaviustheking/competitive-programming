@@ -1,0 +1,25 @@
+times = int(input())
+
+for i in range(times):
+    bruh = input()
+    initial = list(input())
+    initial.append(initial[0])
+    red_team = 0
+    blue_team = 0
+    for i in range(len(initial) - 1):
+        if initial[i] == '1' and initial[i + 1] == '0':
+            if i % 2 == 0:
+                red_team += 1
+            else:
+                blue_team += 1
+        elif initial[i] == initial[i + 1] and initial[i] == '1':
+            if i % 2 == 0:
+                blue_team += 1
+            else:
+                red_team += 1
+
+    print(red_team, blue_team)
+
+
+
+
